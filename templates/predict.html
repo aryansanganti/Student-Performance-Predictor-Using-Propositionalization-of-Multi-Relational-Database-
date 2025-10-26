@@ -21,7 +21,7 @@
 
     <div class="container mt-5">
         <div class="row">
-            <div class="col-md-8 mx-auto">
+            <div class="col-md-10 mx-auto">
                 <h2 class="mb-4 text-center">🎯 Predict Graduation Success</h2>
                 
                 <div class="card shadow">
@@ -36,64 +36,160 @@
                         <hr>
 
                         <form id="predictForm">
+                            <!-- Basic Information -->
+                            <h5 class="mb-3 text-primary">Basic Information</h5>
                             <div class="row">
-                                <div class="col-md-6 mb-3">
+                                <div class="col-md-4 mb-3">
                                     <label class="form-label">Age</label>
                                     <input type="number" class="form-control" id="age" required min="17" max="30" value="20">
                                 </div>
-                                <div class="col-md-6 mb-3">
+                                <div class="col-md-4 mb-3">
                                     <label class="form-label">Gender</label>
                                     <select class="form-select" id="gender" required>
-                                        <option value="M">Male</option>
-                                        <option value="F">Female</option>
+                                        <option value="Male">Male</option>
+                                        <option value="Female">Female</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <label class="form-label">Ethnicity</label>
+                                    <select class="form-select" id="ethnicity" required>
+                                        <option value="Caucasian">Caucasian</option>
+                                        <option value="African American">African American</option>
+                                        <option value="Asian">Asian</option>
+                                        <option value="Other">Other</option>
                                     </select>
                                 </div>
                             </div>
 
-                            <div class="mb-3">
-                                <label class="form-label">Study Hours Per Week</label>
-                                <input type="number" class="form-control" id="study_hours" required min="0" max="60" step="0.1" value="25">
+                            <!-- Family Background -->
+                            <h5 class="mb-3 mt-4 text-primary">Family Background</h5>
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label">Parental Education</label>
+                                    <select class="form-select" id="parental_education" required>
+                                        <option value="High School">High School</option>
+                                        <option value="Some College">Some College</option>
+                                        <option value="Bachelor">Bachelor's</option>
+                                        <option value="Higher">Higher</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label">Parental Support</label>
+                                    <select class="form-select" id="parental_support" required>
+                                        <option value="None">None</option>
+                                        <option value="Low">Low</option>
+                                        <option value="Moderate">Moderate</option>
+                                        <option value="High">High</option>
+                                        <option value="Very High">Very High</option>
+                                    </select>
+                                </div>
                             </div>
 
-                            <div class="mb-3">
-                                <label class="form-label">Average Grade (0-100)</label>
-                                <input type="number" class="form-control" id="avg_grade" required min="0" max="100" step="0.1" value="75">
+                            <!-- Study Habits -->
+                            <h5 class="mb-3 mt-4 text-primary">Study Habits & Attendance</h5>
+                            <div class="row">
+                                <div class="col-md-4 mb-3">
+                                    <label class="form-label">Study Hours Per Week</label>
+                                    <input type="number" class="form-control" id="study_hours" required min="0" max="60" step="0.1" value="25">
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <label class="form-label">Absences</label>
+                                    <input type="number" class="form-control" id="absences" required min="0" max="50" value="5">
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <label class="form-label">Has Tutoring?</label>
+                                    <select class="form-select" id="tutoring" required>
+                                        <option value="0">No</option>
+                                        <option value="1">Yes</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <!-- Extracurricular Activities -->
+                            <h5 class="mb-3 mt-4 text-primary">Extracurricular Activities</h5>
+                            <div class="row">
+                                <div class="col-md-3 mb-3">
+                                    <label class="form-label">Extracurricular</label>
+                                    <select class="form-select" id="extracurricular" required>
+                                        <option value="0">No</option>
+                                        <option value="1">Yes</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-3 mb-3">
+                                    <label class="form-label">Sports</label>
+                                    <select class="form-select" id="sports" required>
+                                        <option value="0">No</option>
+                                        <option value="1">Yes</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-3 mb-3">
+                                    <label class="form-label">Music</label>
+                                    <select class="form-select" id="music" required>
+                                        <option value="0">No</option>
+                                        <option value="1">Yes</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-3 mb-3">
+                                    <label class="form-label">Volunteering</label>
+                                    <select class="form-select" id="volunteering" required>
+                                        <option value="0">No</option>
+                                        <option value="1">Yes</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <!-- Academic Performance -->
+                            <h5 class="mb-3 mt-4 text-primary">Academic Performance</h5>
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label">Average Grade (0-100)</label>
+                                    <input type="number" class="form-control" id="avg_grade" required min="0" max="100" step="0.1" value="75">
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label">Grade Standard Deviation</label>
+                                    <input type="number" class="form-control" id="grade_std" required min="0" max="50" step="0.1" value="10">
+                                </div>
                             </div>
 
                             <div class="row">
-                                <div class="col-md-6 mb-3">
+                                <div class="col-md-4 mb-3">
                                     <label class="form-label">Total Courses Taken</label>
                                     <input type="number" class="form-control" id="total_courses" required min="1" max="20" value="5">
                                 </div>
-                                <div class="col-md-6 mb-3">
+                                <div class="col-md-4 mb-3">
                                     <label class="form-label">Failed Courses Count</label>
                                     <input type="number" class="form-control" id="failed_courses" required min="0" max="10" value="0">
                                 </div>
-                            </div>
-
-                            <div class="row">
-                                <div class="col-md-6 mb-3">
-                                    <label class="form-label">STEM Subject Ratio (0-1)</label>
-                                    <input type="number" class="form-control" id="stem_ratio" required min="0" max="1" step="0.01" value="0.6">
-                                </div>
-                                <div class="col-md-6 mb-3">
+                                <div class="col-md-4 mb-3">
                                     <label class="form-label">Total Credits</label>
                                     <input type="number" class="form-control" id="total_credits" required min="0" max="100" value="18">
                                 </div>
                             </div>
 
-                            <div class="mb-3">
-                                <label class="form-label">Grade Standard Deviation</label>
-                                <input type="number" class="form-control" id="grade_std" required min="0" max="50" step="0.1" value="10">
+                            <div class="row">
+                                <div class="col-md-4 mb-3">
+                                    <label class="form-label">STEM Subject Ratio (0-1)</label>
+                                    <input type="number" class="form-control" id="stem_ratio" required min="0" max="1" step="0.01" value="0.6">
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <label class="form-label">A Grades Count</label>
+                                    <input type="number" class="form-control" id="A_count" required min="0" max="20" value="2">
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <label class="form-label">B Grades Count</label>
+                                    <input type="number" class="form-control" id="B_count" required min="0" max="20" value="3">
+                                </div>
                             </div>
 
-                            <button type="submit" class="btn btn-primary btn-lg w-100">Predict 🔮</button>
+                            <button type="submit" class="btn btn-primary btn-lg w-100 mt-3">Predict 🔮</button>
                         </form>
 
                         <div id="result" class="mt-4" style="display: none;">
                             <div class="alert" id="resultAlert" role="alert">
                                 <h4 id="resultMessage"></h4>
-                                <p class="mb-0">Confidence: <strong id="probability"></strong></p>
+                                <p class="mb-1">Confidence: <strong id="probability"></strong></p>
+                                <p class="mb-0">Risk Level: <strong id="riskLevel"></strong></p>
+                                <p class="mb-0"><em id="recommendation"></em></p>
                             </div>
                         </div>
                     </div>
