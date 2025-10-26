@@ -1,0 +1,10 @@
+feature,importance
+study_hours_per_week,0.40022688092780984
+average_grade,0.2849859699018036
+failed_courses_count,0.23204480470141683
+total_credits,0.03324056956361247
+age,0.021240910867270885
+grade_std_dev,0.013201540461602384
+stem_subject_ratio,0.008596061348516015
+total_courses,0.00646326222796811
+gender_encoded,0.0

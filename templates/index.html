@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Performance Predictor</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="/">🎓 Student Performance Predictor</a>
+            <div class="navbar-nav ms-auto">
+                <a class="nav-link" href="/database">Database</a>
+                <a class="nav-link" href="/features">Features</a>
+                <a class="nav-link" href="/predict">Predict</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-8 mx-auto">
+                <div class="card shadow">
+                    <div class="card-body text-center p-5">
+                        <h1 class="display-4 mb-4">Welcome! 👋</h1>
+                        <p class="lead mb-4">
+                            This project demonstrates <strong>propositionalization</strong> - 
+                            transforming multi-relational data into a single table for machine learning.
+                        </p>
+                        
+                        <div class="row mt-5">
+                            <div class="col-md-4 mb-3">
+                                <div class="feature-box p-4">
+                                    <h3>📊</h3>
+                                    <h5>Relational Data</h5>
+                                    <p>View the multi-table student database</p>
+                                    <a href="/database" class="btn btn-outline-primary">View Database</a>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-4 mb-3">
+                                <div class="feature-box p-4">
+                                    <h3>🔄</h3>
+                                    <h5>Feature Engineering</h5>
+                                    <p>See propositionalized features</p>
+                                    <a href="/features" class="btn btn-outline-primary">View Features</a>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-4 mb-3">
+                                <div class="feature-box p-4">
+                                    <h3>🎯</h3>
+                                    <h5>Make Predictions</h5>
+                                    <p>Predict graduation success</p>
+                                    <a href="/predict" class="btn btn-primary">Try Predictor</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="alert alert-info mt-5" role="alert">
+                            <h5>📚 What is Propositionalization?</h5>
+                            <p class="mb-0">
+                                Propositionalization converts relational data (multiple tables with foreign keys) 
+                                into a single propositional table by creating aggregate features. This enables 
+                                traditional ML algorithms to work with relational databases.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
